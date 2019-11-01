@@ -76,7 +76,14 @@ function checkbox() {
 
 function registration() {
     if (accepted) {
-
+        let password = $("#password").val();
+        let password2 = $("#password2").val();
+        if(password != password2){
+            alert("A jelszavak nem egyeznek")
+        }
+        else{
+            //Adatok begyűjtése és api hívás
+        }
     }
     else {
         alert("Kérjük ellenőrize az adatokat")
