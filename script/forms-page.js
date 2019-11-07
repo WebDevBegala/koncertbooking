@@ -115,7 +115,7 @@ let activePage = 0;
 let pages = [page1, page2, page3];
 
 $(document).ready(() => {
-    $(".forms").append(page3)
+    $(".forms").append(page1)
     indicator()
     //$(".button-area").html(button);
 })
