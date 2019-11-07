@@ -1,11 +1,82 @@
 *{
     font-family: Gotham,Arial,sans-serif;
     outline: 0;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently*/
+                         
 }
 
 body{
     margin:0;
     padding: 0;
+}
+
+.center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/*---------alert box----------*/
+
+.alert-box{
+    display: none;
+}
+
+
+.background{
+background-color: rgba(109, 109, 109, 0.431);
+position: absolute;
+z-index: 9;
+height: 100vh;
+width: 100vw;
+margin: 0;
+}
+.popup-box{
+    height: 50vh;
+    width: 50vw;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.warningIcon{
+color: orange;
+font-size: 5vw;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+margin-top: 5vh;
+}
+
+.warning-animation{
+height: 10vw;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+
+#alert-text{
+    text-align: center;
+    word-break: break-word;
+    width: 80%;
+    font-size: 1.5vw;
+}
+.btnOk{
+   top: 80%;
+   background-color: #00c0bd;
+   color: white;
+   padding: 20px;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.btnOk:hover{
+    background-color: #03dad6;
 }
 /*---------Header----------*/
 .header-desktop{
@@ -90,22 +161,45 @@ body{
 /*---------Content----------*/
 .content{
     position: absolute;
-    top:60%;
-    left: 45%;
+    top:55%;
+    left: 50%;
     transform: translate(-50%,-50%);
     width: 60vw;
-    height: 40vw;
+    height: 75vh;
     z-index: 2;
 }
+
+.top-indicator{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+.indicator-title{
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 5px;
+}
+.indicator-title > p{
+display: contents;
+}
+.hr{
+    height: 2px;
+    background-color: gray;
+    min-width: 10vw;
+    max-width: 15vw;
+}
 .forms-area{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    height: 100%;
-    grid-gap: 10vw;
+   
 }
 .forms{
     display: flex;
     flex-direction: column;
+    margin-top: 10vh;
+    margin-right: 10vw;
+    margin-left: 10vw;
 }
 .input-area{
     display: flex;
@@ -171,6 +265,16 @@ body{
     margin-top: 5vh;
 }
 
+.button-area{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5vh;
+    display: flex;
+    justify-content: space-around;
+    width:40vw
+}
+
 .next-button{
 background-color: #00c0bd;
 width: 10vw;
@@ -182,13 +286,35 @@ border-radius: 10px;
 color:white;
 transition: 0.3s;
 cursor: pointer;
+
+}
+
+.back-button{
+width: 10vw;
+height: 3vw;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+color:#00c0bd;
+border: 1px solid #00c0bd;
+transition: 0.3s;
+cursor: pointer;
+
 }
 
 .next-button:hover{
     background-color: #03dad6;
 }
 
+.correct-animation{
+    display: flex;
+    justify-content: center;
+}
 
+.correct-feedback{
+    text-align: center;
+}
 /*---------Footer----------*/
 .footer{
     background-color: #f8f8f8;
@@ -392,6 +518,11 @@ cursor: pointer;
         height: 5vh;
         margin-bottom: 20px;
     }
+    .back-button{
+        width: 15vw;
+        height: 5vh;
+        margin-bottom: 20px;
+    }
     .checkbox-row{
         width: 30vw;
         margin-left: 25vw;
@@ -418,8 +549,39 @@ cursor: pointer;
     .input{
         width: 40vw;
     }
-  
-    
+    .top-indicator{
+        transform: translateX(-50%);
+        margin-right: 10vw;
+    }
+    #alert-text{
+        font-size: 4vw;
+    }
+    .warningIcon{
+        font-size: 8vw;
+    }
+    .btnOk{
+        padding: 10px;
+    }
+    .warning-animation{
+        height: 20vw;
+       
+    }
+    .back-button{
+        width: 25vw;
+        height: 7vh;
+        margin-bottom: 20px;
+    }
+    .button-area{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .correct-animation{
+        width: 50vw;
+        height: 50vw;
+    }
+    .indicator-title{
+        font-size: 12px;
+    }
 }
 
 @media(max-height: 400px){

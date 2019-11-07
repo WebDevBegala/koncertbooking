@@ -8,10 +8,29 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style/main.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <title>KoncertBooking</title>
 </head>
 
 <body>
+    <div class="alert-box">
+        <div class="background">
+            <div class="popup-box center">
+                <div class="warning-container">
+                    <lottie-player class="warning-animation"
+                        src="https://assets1.lottiefiles.com/datafiles/vi3GofRTh0thGPn/data.json"
+                        background="transparent" speed="1" autoplay>
+                    </lottie-player>
+                </div>
+                <p id="alert-text" class="center"></p>
+                <div class="center btnOk" onclick="closeAlert()">
+                    <span>
+                        Rendben
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="top-line">
         <div class="header-desktop">
             <div class="logo">
@@ -275,7 +294,7 @@
                     </ul>
 
                     <ul class="user-accounts-mobil">
-                        <li style="margin-bottom: 20px;" >
+                        <li style="margin-bottom: 20px;">
                             <a href="">Belépés</a>
                         </li>
                         <li>
@@ -284,7 +303,7 @@
                     </ul>
 
                 </div>
-                <div class="menu-overlay" onclick="menuHandler()" >
+                <div class="menu-overlay" onclick="menuHandler()">
 
                 </div>
             </div>
@@ -383,136 +402,59 @@
 
 
     <div class="content">
+
+        <div class="top-indicator">
+            <div class="indicator-title">
+                <p>Személyes adatok</p>
+            </div>
+
+            <div class="hr"></div>
+            <div class="indicator-title">
+                <p>Kapcsolati adatok</p>
+            </div>
+            <div class="hr"></div>
+            <div class="indicator-title">
+                <p>Kész</p>
+            </div>
+        </div>
         <div class="forms-area">
-            <div class="personal-form">
+            <div class="forms page1">
 
-                <div class="forms">
-                    <div class="input-area">
-                        <div class="input-title">
-                            <p>Keresztnév</p>
-                        </div>
-                        <div class="input-block">
-                            <input onfocus="focused(event)" onblur="unfocused(event)" type="text" class="input"
-                                placeholder="Keresztnév" onfocus="focused(event)" onblur="unfocused(event)">
-                        </div>
-                    </div>
-                    <div class="input-area">
-                        <div class="input-title">
-                            <p>Vezetéknév</p>
-                        </div>
-                        <div class="input-block">
-                            <input onfocus="focused(event)" onblur="unfocused(event)" type="text" class="input"
-                                placeholder="Vezetéknév">
-                        </div>
-                    </div>
-                    <div class="input-area">
-                        <div class="input-title">
-                            <p>Születési dátum</p>
-                        </div>
-                        <div class="input-block">
-                            <input onfocus="focused(event)" onblur="unfocused(event)" type="date" class="input"
-                                placeholder="Születési dátum" max="2010-01-01" >
-                        </div>
-                    </div>
-                    <div class="input-area">
-                        <div class="input-title">
-                            <p>Jelszó</p>
-                        </div>
-                        <div class="input-block">
-                            <input onfocus="focused(event)" onblur="unfocused(event)" type="password" class="input" id="password"
-                                placeholder="Jelszó">
-                        </div>
-                    </div>
-                    <div class="input-area">
-                        <div class="input-title">
-                            <p>Jelszó mégegyszer</p>
-                        </div>
-                        <div class="input-block">
-                            <input onfocus="focused(event)" onblur="unfocused(event)" type="password" class="input" id="password2"
-                                placeholder="Jelszó mégegyszer">
-                        </div>
-                    </div>
-                </div>
             </div>
-            <hr id="hr" >
-            <div class="contact-form">
-                <div class="vr">
-
-                </div>
-                <div class="input-area">
-                    <div class="input-title">
-                        <p>Lakcím</p>
-                    </div>
-                    <div class="input-block">
-                        <input onfocus="focused(event)" onblur="unfocused(event)" type="text" class="input"
-                            placeholder="Lakcím">
-                    </div>
-                </div>
-                <div class="input-area">
-                    <div class="input-title">
-                        <p>Telefonszám</p>
-                    </div>
-                    <div class="input-block">
-                        <input onfocus="focused(event)" onblur="unfocused(event)" type="tel" class="input"
-                            placeholder="Telefonszám">
-                    </div>
-                </div>
-                <div class="input-area">
-                    <div class="input-title">
-                        <p>Email</p>
-                    </div>
-                    <div class="input-block">
-                        <input onfocus="focused(event)" onblur="unfocused(event)" type="email" class="input"
-                            placeholder="Email">
-                    </div>
-                </div>
-
-                <div class="checkbox-row">
-                    <div class="box" onclick="checkbox()">
-                        <i class="fas fa-check checkIcon"></i>
-                    </div>
-                    <div class="text">
-                        <p>Elfogadom az ÁSZF-et</p>
-                    </div>
-                </div>
-                <div class="registration-button">
-                        <div class="next-button" onclick="registration()" >
-                            <span>Tovább</span>
-                        </div>
-                    </div>
-                </div>
-             
+            <div class="button-area">
             </div>
         </div>
 
+    </div>
 
-        <div class="footer">
-            <div class="footer-row">
-                <div class="signal">
-                    <p>2019 KoncertBooking © Minden jog fenntartva.</p>
-                </div>
-                <div class="footer-buttons">
-                    <a href="">RÓLUNK</a>
-                    <a href="">ZENEKAROKNAK</a>
-                    <a href="">SEGÍTSÉG</a>
-                    <a href="">FELHASZNÁLÁS</a>
-                    <a href="">ADATKEZELÉS</a>
-                </div>
+
+    <div class="footer">
+        <div class="footer-row">
+            <div class="signal">
+                <p>2019 KoncertBooking © Minden jog fenntartva.</p>
+            </div>
+            <div class="footer-buttons">
+                <a href="">RÓLUNK</a>
+                <a href="">ZENEKAROKNAK</a>
+                <a href="">SEGÍTSÉG</a>
+                <a href="">FELHASZNÁLÁS</a>
+                <a href="">ADATKEZELÉS</a>
             </div>
         </div>
+    </div>
 
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script src="https://kit.fontawesome.com/405297d42c.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script src="script/side_menu.js"></script>
-        <script src="script/main.js"></script>
-        <script src="script/logo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/405297d42c.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="script/side_menu.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/forms-page.js"></script>
 </body>
 
 </html>
