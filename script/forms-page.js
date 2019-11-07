@@ -84,7 +84,7 @@ let page2 = `
 `
 
 let page3 = ` <div style="display:flex;justify-content:center" >
-<lottie-player class="correct-animation" src="https://assets4.lottiefiles.com/packages/lf20_pmYw5P.json"
+<lottie-player class="correct-animation" src="/script/correct.json"
     background="transparent" speed="0.5" autoplay>
 </lottie-player>
 
@@ -115,7 +115,7 @@ let activePage = 0;
 let pages = [page1, page2, page3];
 
 $(document).ready(() => {
-    $(".forms").append(page1)
+    $(".forms").append(page3)
     indicator()
     //$(".button-area").html(button);
 })
